@@ -2478,14 +2478,6 @@ nav.navbar .nav .open > a:hover, nav.navbar .nav .open > a:focus {
     padding: 150px 0;
 }
 
-.text-photo-sc .photo-holder.photo1 {
-    background-image: url("../images/photo1.jpg");
-}
-
-.text-photo-sc .photo-holder.photo2 {
-    background-image: url("../images/photo2.jpg");
-}
-
 .text-photo-sc .photo-holder img {
     width: 100%;
 }

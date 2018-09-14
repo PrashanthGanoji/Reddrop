@@ -1,0 +1,13 @@
+.panel-body > .row {
+  margin-bottom:15px;
+  padding:5px 0px;
+}
+
+.panel-body label{
+  font-size:18px;
+}
+
+.form-control-static{
+  font-size:16px;
+  padding:0 15px;
+}

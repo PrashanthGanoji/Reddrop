@@ -1,0 +1,39 @@
+/*---------------------------------------
+ *                                      *
+ *       Add Your Custom CSS Here       *
+ *                                      *
+ ---------------------------------------*/
+
+.brand-name{
+    color: white;
+    font-weight: 500;
+}
+
+.myform{
+    position: relative;
+    z-index: 10;
+    margin-top: -50px;
+}
+
+
+.myform2{
+    position: relative;
+    z-index: 10;
+    margin-top: -110px;
+}
+
+.formElement{
+    margin-bottom:10px;
+}
+.searchLabel{
+   font-weight: 500;
+}
+
+button[disabled]{
+    background:#8591a7 !important;
+}
+
+.error-text{
+    color:red;
+}
+

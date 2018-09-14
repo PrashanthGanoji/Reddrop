@@ -1,0 +1,16 @@
+.feature-list{
+  padding-left:20px
+}
+
+.feature-list li{
+  font-weight: 300;
+}
+
+.donors-container{
+  min-height: 400px;
+}
+
+.disabled{
+  pointer-events: none;
+
+}

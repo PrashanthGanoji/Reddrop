@@ -3,7 +3,7 @@ import { Consumer } from '../context'
 import axios from 'axios'
 import './Dashboard.css';
 import isEmpty from '../utils/is_empty'
-
+import {ROOT_URL} from '../resources/links'
 
 import Select from 'react-select'
 import { cities, bloodgroups, states } from '../resources/cities';
@@ -29,7 +29,7 @@ class Dashboard extends Component {
   }
 
   setCurrentUser = () => {
-    axios.get('http://127.0.0.1:8000/api/details')
+    axios.get(ROOT_URL+'/api/details')
       .then(res => {
         const { name, bloodgroup, state, city, active, age } = res.data
         const phone = res.data.user.username
@@ -71,7 +71,7 @@ class Dashboard extends Component {
       paid: false
     }
     console.log(editedData)
-    axios.put('http://127.0.0.1:8000/api/details', editedData)
+    axios.put(ROOT_URL+'/api/details', editedData)
       .then(edu => {
         console.log(edu)
         this.setState({ isEditing: false })

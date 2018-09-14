@@ -5,6 +5,7 @@ import axios from 'axios'
 
 
 import { cities, bloodgroups, states } from '../resources/cities';
+import {ROOT_URL} from '../resources/links'
 
 class Register extends Component {
 
@@ -45,7 +46,7 @@ class Register extends Component {
             active: true,
             paid: false
         }
-        axios.post('http://127.0.0.1:8000/api/donors', regData)
+        axios.post(ROOT_URL+'/api/donors', regData)
             .then(edu => {
                 console.log(edu)
                 this.props.history.push('/')

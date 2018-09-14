@@ -5,6 +5,7 @@ import axios from 'axios'
 import * as jwt_decode from 'jwt-decode';
 
 import { setCurrentUser } from '../actions/authactions'
+import {ROOT_URL} from '../resources/links'
 
 class Login extends Component {
 
@@ -15,27 +16,6 @@ class Login extends Component {
     errors: {}
   }
 
-  /*
-  loginUser = data => {
-    return function (dispatch) {
-        axios.post('/api/login', data)
-        .then(res => {
-            const { token } = res.data;
-            localStorage.setItem('jwtToken', token);
-            setJwtToken(token);
-            const decoded = jwt_decode(token);
-            console.log(decoded)
-            dispatch(setCurrentUser(decoded))
-        })
-        .catch(err => {
-            dispatch({
-                type: GET_ERRORS,
-                payload: err.response.data
-            })
-        })
-    }
-}
-  */
   toggleNavbarCollapse = () => {
     let ham = document.getElementById('hamburger')
     if (!ham['className'].includes('collapsed'))
@@ -48,7 +28,7 @@ class Login extends Component {
       password: this.state.password
     }
     const props = this.props
-    axios.post('http://127.0.0.1:8000/api/login', logData)
+    axios.post(ROOT_URL+'/api/login', logData)
       .then(
         (res) => {
           const { token } = res.data

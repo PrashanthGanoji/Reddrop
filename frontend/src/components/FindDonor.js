@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Consumer } from '../context'
 import Select from 'react-select'
 import axios from 'axios'
-
+import {ROOT_URL} from '../resources/links'
 
 import { cities, bloodgroups, states } from '../resources/cities'
 import isEmpty from '../utils/is_empty'
@@ -36,7 +36,7 @@ class FindDonor extends Component {
     console.log(queryList)
     const queryString = queryList.join('&')
 
-    let url = `http://127.0.0.1:8000/api/donors`
+    let url = ROOT_URL+`/api/donors`
     url = url + '?' + queryString;
     console.log(url)
 
